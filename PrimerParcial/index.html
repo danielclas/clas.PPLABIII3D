@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" type="module"></script>
+    <link rel="stylesheet" type = "text/css" href="./styles/styles.css"/>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+    <title>PracticaParcial</title>
+</head>
+<body>
+
+    <header>
+        <img src="./assets/logo.svg" alt="Logo">
+        <nav class="headerNav">
+          <a>Nosotros</a>
+          <a>Anuncios</a>
+          <a>Blog</a>
+          <a>Contactos</a>
+        </nav>
+    </header>
+<!-- 
+    <div id="modal">
+        <img src="assets/spinner.gif" alt="Spinner" id="modal-content">
+    </div> -->
+
+    <hr>
+    <h1>Administración</h1>
+    <fieldset>
+        <legend>Información del anuncio</legend>
+        <form id="form" action="#">
+                
+                <input type="hidden" name="id" id="idinput">
+
+                <label for="titulo">Titulo: </label>
+                <input type="text" name="titulo" placeholder="Titulo">
+
+                <label>Transacción: </label>
+                <br>
+                <select name="transaccion">
+                    <option value="venta">Venta</option>
+                    <option value="alquiler">Alquiler</option>
+                    <option value="permuta">Permuta</option>
+                </select>
+
+                <br>
+                <label for="descripcion">Descripcion: </label>
+                <input type="text" name="descripcion" placeholder="Descripcion">
+
+                <label for="precio">Precio:</label>
+                <input type="number" name="precio" min=0 placeholder="Precio">
+
+                <label for="num_wc">Cantidad de puertas: </label>
+                <input type="number" name="num_puertas" min=0 placeholder="Puertas">
+
+                <label for="num_estacionamiento">Cantidad de KMs: </label>                
+                <input type="number" name="num_KMs" min=0 placeholder="KM">
+
+                <label for="num_dormitorio">Potencia: </label>
+                <input type="number" name="potencia" min=0 placeholder="Potencia">
+
+                <p id="errorMsg">Error en los datos del formulario</p>
+                <br>
+        </form>
+    </fieldset>
+
+    <div id="tableContainer">
+        <button id="saveBtn">Guardar</button>
+        <button id="deleteBtn">Eliminar</button>
+        <button id="cancelBtn">Cancelar</button>
+        <p id="emptyTable">No hay datos para mostrar</p>
+    </div>
+
+    <footer>
+        <nav class="footerNav">
+          <a>Nosotros</a>
+          <a>Anuncios</a>
+          <a>Blog</a>
+          <a>Contactos</a>
+        </nav>
+        <p class='footerText'>
+            Todos los derechos reservados 2019 .
+        </p>
+    </footer>
+</body>
+</html>
