@@ -1,5 +1,4 @@
-export class anuncio{
-
+class anuncio{
     constructor(obj){
         this.id = obj.id;
         this.titulo = obj.titulo;
@@ -9,5 +8,12 @@ export class anuncio{
         this.num_puertas = obj.num_puertas;
         this.num_KMs = obj.num_KMs;
         this.potencia = obj.potencia;
+    }
+}
+
+export class anuncio_auto extends anuncio{
+
+    constructor(obj){
+        super(obj);
     }
 }

@@ -19,12 +19,13 @@
           <a>Contactos</a>
         </nav>
     </header>
+
+    <img id="banner" src="./assets/banner.jpg" alt="Banner">
 <!-- 
     <div id="modal">
         <img src="assets/spinner.gif" alt="Spinner" id="modal-content">
     </div> -->
 
-    <hr>
     <h1>Administración</h1>
     <fieldset>
         <legend>Información del anuncio</legend>
@@ -37,7 +38,8 @@
 
                 <label>Transacción: </label>
                 <br>
-                <select name="transaccion">
+                <select name="transaccion" >
+                    <option value="" disabled selected>Elija una transaccion</option>
                     <option value="venta">Venta</option>
                     <option value="alquiler">Alquiler</option>
                     <option value="permuta">Permuta</option>
@@ -50,12 +52,15 @@
                 <label for="precio">Precio:</label>
                 <input type="number" name="precio" min=0 placeholder="Precio">
 
+                <img class="icon" src="./assets/icons/dooricon.png" alt="">
                 <label for="num_wc">Cantidad de puertas: </label>
                 <input type="number" name="num_puertas" min=0 placeholder="Puertas">
-
+                
+                <img class="icon" src="./assets/icons/speedicon.png" alt="">
                 <label for="num_estacionamiento">Cantidad de KMs: </label>                
                 <input type="number" name="num_KMs" min=0 placeholder="KM">
-
+                
+                <img class="icon" src="./assets/icons/motoricon.png" alt="">
                 <label for="num_dormitorio">Potencia: </label>
                 <input type="number" name="potencia" min=0 placeholder="Potencia">
 
@@ -65,9 +70,9 @@
     </fieldset>
 
     <div id="tableContainer">
-        <button id="saveBtn">Guardar</button>
-        <button id="deleteBtn">Eliminar</button>
-        <button id="cancelBtn">Cancelar</button>
+        <button id="saveBtn"><img class="icon" src="./assets/icons/saveicon.png" alt="save">Guardar</button>
+        <button id="deleteBtn"><img class="icon" src="./assets/icons/deleteicon.png" alt="delete">Eliminar</button>
+        <button id="cancelBtn"><img class="icon" src="./assets/icons/cancelicon.png" alt="cancel">Cancelar</button>
         <p id="emptyTable">No hay datos para mostrar</p>
     </div>
 
@@ -79,7 +84,7 @@
           <a>Contactos</a>
         </nav>
         <p class='footerText'>
-            Todos los derechos reservados 2019 .
+            Todos los derechos reservados 2019 &reg;
         </p>
     </footer>
 </body>

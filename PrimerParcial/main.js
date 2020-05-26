@@ -27,7 +27,7 @@ form.oninput = () => {
 function saveToServer(){
 
     let obj = Form.formToObject();
-    console.log(JSON.stringify(obj));
+    
     if(!obj){
         Notify.invalidForm(true);
     }else{

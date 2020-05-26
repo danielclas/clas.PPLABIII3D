@@ -1,6 +1,6 @@
 import {Table} from './table.js';
 import { Notify } from './notify.js';
-import { anuncio } from './anuncio.js';
+import { anuncio_auto } from './anuncio.js';
 
 let form = document.getElementById('form');
 
@@ -26,7 +26,7 @@ export class Form{
 
         if(transaccion && obj) obj['transaccion'] = transaccion;
 
-        return transaccion && obj ? new anuncio(obj) : undefined;
+        return transaccion && obj ? new anuncio_auto(obj) : undefined;
     }
 
     static cleanForm(){
