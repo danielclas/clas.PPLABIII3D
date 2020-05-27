@@ -4,7 +4,6 @@ import {Form} from './lib/form.js';
 import {Notify} from './lib/notify.js';
 
 Request.ajaxRequest('GET', '', 'traer', '');
-// Request.fetchRequest('GET', '', 'traer', '');
 
 let form = document.getElementById('form');
 let saveBtn = document.getElementById('saveBtn');
@@ -14,7 +13,6 @@ let cancelBtn = document.getElementById('cancelBtn');
 saveBtn.onclick = saveToServer;
 deleteBtn.onclick = deleteEntry;
 cancelBtn.onclick = cancelEdit;
-// window.onscroll = Table.scrollTable;
 
 deleteBtn.style.display = 'none';
 cancelBtn.style.display = 'none';
@@ -27,7 +25,7 @@ form.oninput = () => {
 function saveToServer(){
 
     let obj = Form.formToObject();
-    
+
     if(!obj){
         Notify.invalidForm(true);
     }else{

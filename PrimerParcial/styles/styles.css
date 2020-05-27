@@ -28,13 +28,6 @@ td,th{
     border-left: solid 1px rgb(63, 81, 181);
 }
 
-/* @media screen and (max-width:850px){
-    table,td,th{
-        display: flex;
-        flex-direction: row;
-    }
-} */
-
 th{
     text-align: center;
     background-color: rgba(63, 81, 181,0.15);
@@ -172,7 +165,17 @@ a{
 
 img{
     height: 90px;
-    margin-left: 50px;
+    max-width: 900px;
+}
+
+#imgContainer{    
+    text-align: center;
+}
+
+#logo{
+    max-width: 100%;
+    max-height: 80px;
+    margin-left: 20px;
 }
 
 #banner{
