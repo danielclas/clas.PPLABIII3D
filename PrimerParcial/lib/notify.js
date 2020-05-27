@@ -3,18 +3,18 @@ export class Notify{
     
     static showSpinner(show){
         
-        // let display = show ? 'block' : 'none';
+        let display = show ? 'block' : 'none';
         
-        // document.getElementById('modal').style.display = display;
-        // document.getElementById('modal-content').style.display = display;
+        document.getElementById('modal').style.display = display;
+        document.getElementById('modal-content').style.display = display;
 
-        // document.getElementsByTagName('body')[0].style.overflow = show ? 'hidden' : '';
+        document.getElementsByTagName('body')[0].style.overflow = show ? 'hidden' : '';
     }    
 
     static invalidForm(show){        
 
-        let p = document.getElementById('errorMsg');
-        p.style.display= show ? 'block' : 'none';
+        let p = document.getElementById('errorMsg');        
+        p.style.display = show ? 'block' : 'none';
     }
 
     static showEditButtons(show){       

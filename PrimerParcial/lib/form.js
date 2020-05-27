@@ -8,6 +8,7 @@ export class Form{
 
     static formToObject(){
 
+        //Parses the current form to an object
         let obj = {};
         let inputs = document.querySelectorAll('input');
         let options = document.getElementsByTagName('option');
@@ -31,6 +32,7 @@ export class Form{
 
     static cleanForm(){
 
+        //Sets all form elements to its default value
         let inputs = document.querySelectorAll('input');
         let options = document.getElementsByTagName('option');
 
@@ -38,7 +40,7 @@ export class Form{
             input.value = input.type == 'number' ? 0 : "";            
         });
 
-        for (let item of options) item.selected = false;          
+        options[0].selected = true;        
 
         form.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
         Notify.showEditButtons(false);
@@ -56,6 +58,7 @@ export class Form{
 
     static populateForm(selectedRow){
 
+        //Populates form from data obtained from the selected row
         let inputs = document.querySelectorAll('input');
         let keys = Table.keys();
         let transaccion = keys.indexOf('transaccion');
@@ -76,7 +79,7 @@ export class Form{
         });  
 
         for(let item of options){
-            if(item.value == selectedRow[transaccion]){
+            if(item.value == selectedRow[transaccion].innerHTML){
                 item.selected = true;
             }
         }

@@ -39,6 +39,8 @@ tr{
     transition: 0.05s;
 }
 
+
+
 tr:hover, .selected {    
     border-top: solid 2px rgb(114, 174, 217);
     border-bottom: solid 2px rgb(114, 174, 217);
@@ -108,7 +110,7 @@ fieldset>form{
 }
 
 #modal-content{
-    width:300px;
+    height:100px;
     padding: 10px 20px;
     margin: 20% auto;
     position: relative;
@@ -138,6 +140,12 @@ p{
     display: none;
     text-align: center;    
     text-emphasis: bolder;
+    font-size: 20px;
+    transition: 0.05s;
+}
+
+#errorMsg:hover{
+    transform: scale(1.05);
 }
 
 header, footer {
@@ -199,3 +207,12 @@ img{
     margin-right: 30px;
     margin-top: 30px;
 }
+
+
+
+@media screen and (max-width:850px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+} 
