@@ -162,6 +162,7 @@ header, footer {
 a{
     padding: 10px;
     font-size: 17px;
+    text-decoration: none;
 }
 
 .icon{
