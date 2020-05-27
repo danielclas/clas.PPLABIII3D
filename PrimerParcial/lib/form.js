@@ -48,8 +48,13 @@ export class Form{
 
     static isValidInput(input){
 
-        if(input.type == 'number' && (isNaN(input.value) || input.value < 0 || input.value == ""))            
+        if(input.type == 'number'){
+            if((isNaN(input.value) || input.value < 0 || input.value == "")){
                 return false;
+            }else if(input.name == 'num_puertas' && input.value > 8){
+                return false;
+            }
+        }                       
         else if(input.type == 'text' && input.value == "")
                 return false;        
 
